@@ -15,18 +15,11 @@ def lbMOV(lbvm, *args):
     lbvm.registers[args[0]].r = lbvm.registers[args[1]].r
 
 def lbSET(lbvm, *args):
-    #print("SET")
     lbvm.registers[args[0]].r = struct.unpack("<H", args[1])[0]
-    #print("Numer Rejestru: ", args[0])
-    #print("Wartość po SET: ", lbvm.registers[args[0]].r)
 
 def lbLB(lbvm, *args):
-    #print("Numer rejestru docelowego w LB: ", args[0])
-    #print("Numer rejestru początkowego w LB: ", args[1])
-    #print(struct.unpack("B",args[1])[0])
     byte = lbvm.registers[struct.unpack("B",args[1])[0]].r
     lbvm.registers[args[0]].r = byte
-    #print("O TUTAJ" , lbvm.registers[args[0]].r)
 
 def lbSB(lbvm, *args):
     byte = lbvm.registers[args[1]].r
@@ -34,9 +27,6 @@ def lbSB(lbvm, *args):
    
 def lbOUT(lbvm, *args):
     #This won't be implemented, instead I will use simple print function.
-    #print(hex(lbvm.memory.mem[lbvm.registers[args[0]].r]))
-    if (hex(lbvm.memory.mem[lbvm.registers[args[0]].r])) == '0xa':
-        sys.exit()
     print(chr(lbvm.memory.mem[lbvm.registers[args[0]].r]))
 
 dir_of_opcodes = {0x00: (lbADD,2), 0x01: (lbCMP, 2), 0x02: (lbMOV, 2), 0x03: (lbSET, 3),
@@ -71,32 +61,32 @@ class LBVM:
         self.memory = LBMemory()
         self.MIP.r = 0
         self.MSP.r = 500000
+        self.offset = 0
     
     def readBytecode(self, filename):
         with open(filename, 'rb') as f:
-            self.memory.mem = f.read()
-            #print(self.memory.mem)
+            for i in f.read():
+                self.memory.storeByte(i, self.offset)
+                self.offset += 1
 
     def execute(self, opcode):
-        #print(self.MIP.r+1)
-        #print(self.MIP.r+2, self.MIP.r+1 + dir_of_opcodes[self.memory.mem[self.MIP.r]][1])
         arg1 = self.memory.mem[self.MIP.r+1]
         arg2 = self.memory.mem[self.MIP.r+2 : self.MIP.r+1 + dir_of_opcodes[self.memory.mem[self.MIP.r]][1]]
         func = dir_of_opcodes[self.memory.mem[self.MIP.r]][0]
-        #print("TEST ",func, arg1, arg2)
         func(self, arg1, arg2)
-        #print(dir_of_opcodes[self.memory.mem[self.MIP.r]][1])
         self.MIP.r +=dir_of_opcodes[self.memory.mem[self.MIP.r]][1]+1
 
     
     def run(self):
-        while True:
+        i = 0
+        while i != self.offset:
             self.execute(self.memory.mem)
+            i += 1
+        sys.exit()
 
 if __name__ == '__main__':
-    m = LBVM()
-    m.readBytecode("testResult2")
-    m.run()
-
+    VM = LBVM()
+    VM.readBytecode(sys.argv[1])
+    VM.run()
 
 
