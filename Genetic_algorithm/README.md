@@ -4,7 +4,11 @@ Hello!
 Inspired by this:  
 https://github.com/gynvael/stream/tree/master/028-monaliza-genetycznie
 
-I trought I would to the same but in Python and with triangles, but not with Mona Lisa. I would rather go with _The Lady with an Ermine gray_ And I have to be honest. The biggest problem was to render the triangle!  
+I trought I would to the same but in Python and with triangles, but not with Mona Lisa. I would rather go with _The Lady with an Ermine gray_:
+
+![Screen five.](https://github.com/lowerbyte/Blog/blob/master/Genetic_algorithm/images/The_Lady_with_an_Ermine_gray.jpg)
+
+And I have to be honest. The biggest problem was to render the triangle!  
 But I found this article:  
 http://www.sunshine2k.de/coding/java/TriangleRasterization/TriangleRasterization.html
 
