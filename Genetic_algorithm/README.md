@@ -14,14 +14,16 @@ Whatever works! ; )
 Here you've got some examples how it all worked (only 1000 generation, because my laptop couldn't do more):
 
 For 100 generation we can see there is some shape of our art:
-![Screen one.](/images/100pokolen_triangle.png)
+
+![Screen one.](https://github.com/lowerbyte/Blog/blob/master/Genetic_algorithm/images/100pokolen_triangles.png)
 
 So it could only be better (300, 700 and 1000 generations)!
-![Screen two.](/images/300pokolen_triangle.png)![Screen three.](/images/700pokolen_triangle.png)![Screen four.](/images/1000pokolen_triangle.png)
+
+![Screen two.](https://github.com/lowerbyte/Blog/blob/master/Genetic_algorithm/images/300pokolen_traingle.png)![Screen three.](https://github.com/lowerbyte/Blog/blob/master/Genetic_algorithm/images/700pokolen_triangle.png)![Screen four.](https://github.com/lowerbyte/Blog/blob/master/Genetic_algorithm/images/1000pokolen_triangle.png)
 
 Ok it looks really nice, but I wasn't pleased enough so I change the alghoritm to estimate by rectangles and the results are as follows (100, 300, 700 and 1000 generations):
 
-![Screen five.](/images/100pokolen_triangle.png)![Screen six.](/images/300pokolen_triangle.png)![Screen seven.](/images/700pokolen_triangle.png)![Screen eight.](/images/1000pokolen_triangle.png)
+![Screen five.](https://github.com/lowerbyte/Blog/blob/master/Genetic_algorithm/images/100pokolen.png)![Screen six.](https://github.com/lowerbyte/Blog/blob/master/Genetic_algorithm/images/300pokolen.png)![Screen seven.](https://github.com/lowerbyte/Blog/blob/master/Genetic_algorithm/images/700pokolen.png)![Screen eight.](https://github.com/lowerbyte/Blog/blob/master/Genetic_algorithm/images/1000pokolen.png)
 
 The results are similar and it looks very promissing. Feel free to change the code and draw what ever you want with your genetic alghoritm!  
 Take care!
