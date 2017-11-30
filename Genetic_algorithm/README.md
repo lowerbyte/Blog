@@ -14,7 +14,7 @@ Whatever works! ; )
 Here you've got some examples how it all worked (only 1000 generation, because my laptop couldn't do more):
 
 For 100 generation we can see there is some shape of our art:
-![Screen one.](/Genetic_algorithm/images/100pokolen_triangle.png)
+![Screen one.](Blog/Genetic_algorithm/images/100pokolen.png )
 
 So it could only be better (300, 700 and 1000 generations)!
 ![Screen two.](/images/300pokolen_triangle.png)![Screen three.](/images/700pokolen_triangle.png)![Screen four.](/images/1000pokolen_triangle.png)
