@@ -15,11 +15,11 @@ Here you've got some examples how it all worked (only 1000 generation, because m
 
 For 100 generation we can see there is some shape of our art:
 
-![Screen one.](https://github.com/lowerbyte/Blog/blob/master/Genetic_algorithm/images/100pokolen_triangle.png)
+![Screen one.](https://github.com/lowerbyte/Blog/blob/master/Genetic_algorithm/images/100pokolen_triangles.png)
 
 So it could only be better (300, 700 and 1000 generations)!
 
-![Screen two.](https://github.com/lowerbyte/Blog/blob/master/Genetic_algorithm/images/300pokolen_triangle.png)![Screen three.](https://github.com/lowerbyte/Blog/blob/master/Genetic_algorithm/images/700pokolen_triangle.png)![Screen four.](https://github.com/lowerbyte/Blog/blob/master/Genetic_algorithm/images/1000pokolen_triangle.png)
+![Screen two.](https://github.com/lowerbyte/Blog/blob/master/Genetic_algorithm/images/300pokolen_traingle.png)![Screen three.](https://github.com/lowerbyte/Blog/blob/master/Genetic_algorithm/images/700pokolen_triangle.png)![Screen four.](https://github.com/lowerbyte/Blog/blob/master/Genetic_algorithm/images/1000pokolen_triangle.png)
 
 Ok it looks really nice, but I wasn't pleased enough so I change the alghoritm to estimate by rectangles and the results are as follows (100, 300, 700 and 1000 generations):
 
